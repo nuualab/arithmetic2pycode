@@ -17,6 +17,14 @@ numpy==1.21.2
 git clone https://github.com/nuualab/math_problem_solve_2nd
 ```
 
+## Pretrained Model Download
+weights 디렉토리에 저장   
+[a.ckpt](https://drive.google.com/file/d/1XVEiTzujs4jixTO3lgFTJPdvJZZg8eVP/view?usp=sharing, "a.ckpt")   
+weights 디렉토리에 저장   
+[both.ckpt](https://drive.google.com/file/d/18Cc_s6OuAkOT67eujmrNq_a56UMPkQG9/view?usp=sharing, "both.ckpt")
+weights/kogpt2 디렉토리에 저장   
+[pytorch_model.bin](https://drive.google.com/file/d/1oJsPsV-jIoxi3yDsKIqpIVQXYXXcvTuP/view?usp=sharing, "pytorch_model.bin")
+
 ## License
 이 프로젝트는 Apache 2.0 라이선스를 따릅니다. 모델 및 코드를 사용할 경우 라이선스 내용을 준수해주세요. 라이선스 전문은 LICENSE 파일에서 확인하실 수 있습니다.
 
