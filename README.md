@@ -2,13 +2,13 @@
 자연어로 된 수학문제를 읽어 답과 풀이(python code)를 제출하는 AI 모델을 배포합니다.
 
 ## Requirements
-tokenizers==0.8.1.rc2.
-transformers==3.3.1.
-json5==0.9.6.
-python==3.8.10.
-pytorch==1.10.0.
-pytorch-lightning==1.2.10.
-parso==0.8.2.
+tokenizers==0.8.1.rc2   
+transformers==3.3.1     
+json5==0.9.6   
+python==3.8.10   
+pytorch==1.10.0   
+pytorch-lightning==1.2.10   
+parso==0.8.2   
 numpy==1.21.2
 
 ## How to install
