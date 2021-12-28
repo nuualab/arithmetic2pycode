@@ -55,6 +55,13 @@ def stdoutIO(stdout=None):
 parser = argparse.ArgumentParser(description='Simsimi based on KoGPT-2')
 
 
+
+parser.add_argument('--problem_path',
+                    type=str,
+                    default='"../inference_results/problem_400.json"',
+                    help='model binary for starting chat')
+
+
 parser.add_argument('--model_params',
                     type=str,
                     default='model_chp/model_-last.ckpt',
@@ -618,10 +625,7 @@ for i, key in enumerate(mapping_key):
     trans_gpt_convert_key[key] = value
     gpt_trans_convert_key[value] = key
 
-
-
-question_json = "../inference_results/problem_400.json"
-
+question_json = args.problem_path
 
 if __name__ == "__main__":
     
