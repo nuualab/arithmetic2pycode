@@ -4,8 +4,7 @@
 ## Requirements
 tokenizers==0.8.1.rc2   
 transformers==3.3.1     
-json5==0.9.6   
-python==3.8.10   
+json5==0.9.6     
 pytorch==1.10.0   
 pytorch-lightning==1.2.10   
 parso==0.8.2   
