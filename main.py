@@ -692,37 +692,37 @@ if __name__ == "__main__":
     both_results = inference_both(both_outputs, keyword_checks)
     
     
-    if ensemble:
-        a_outputs = []
-        for i, question in enumerate(questions):
+    # if ensemble:
+    #     a_outputs = []
+    #     for i, question in enumerate(questions):
 
-            output = a_model.test(question)
-            for j in range(len(output)):
-                if output[j] in gpt_trans_convert_key:
-                    output[j] = gpt_trans_convert_key[output[j]]
+    #         output = a_model.test(question)
+    #         for j in range(len(output)):
+    #             if output[j] in gpt_trans_convert_key:
+    #                 output[j] = gpt_trans_convert_key[output[j]]
 
-                if output[j] in num_dict[i]:
-                    output[j] = num_dict[i][output[j]]
+    #             if output[j] in num_dict[i]:
+    #                 output[j] = num_dict[i][output[j]]
 
-            a_outputs.append(output)
+    #         a_outputs.append(output)
 
-        a_results = inference_a(a_outputs)
+    #     a_results = inference_a(a_outputs)
         
-        results = []
+    #     results = []
         
-        for i in range(len(both_results)):
-            if both_results[i]["type"] == 'c':
-                results.append(both_results[i])
+    #     for i in range(len(both_results)):
+    #         if both_results[i]["type"] == 'c':
+    #             results.append(both_results[i])
                 
-            elif a_results[i]["answer"] != "" or (a_results[i]["answer"] == "" and both_results[i]['answer'] == ""):
-                results.append(a_results[i])
+    #         elif a_results[i]["answer"] != "" or (a_results[i]["answer"] == "" and both_results[i]['answer'] == ""):
+    #             results.append(a_results[i])
                 
-            else:
-                results.append(both_results[i])
+    #         else:
+    #             results.append(both_results[i])
                 
         
-    else:
-        results = both_results
+    # else:
+    results = both_results
         
     json_result = {}
     for idx, result in enumerate(results):
