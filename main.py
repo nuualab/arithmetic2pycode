@@ -637,9 +637,9 @@ if __name__ == "__main__":
         dat = json.load(f)
         
     raw_questions = []
-    # keywords = ['서로 다른']
-    # for key in dat:
-    #     raw_questions.append(dat[key]['question'])
+    keywords = ['서로 다른']
+    for key in dat:
+        raw_questions.append(dat[key]['question'])
         
         
     # get question number
@@ -731,15 +731,15 @@ if __name__ == "__main__":
         answer = result['answer']
         
         json_result[idx+1] = {}
-#         json_result[idx+1]['answer'] = answer.strip()
-#         json_result[idx+1]['equation'] = equation
+        json_result[idx+1]['answer'] = answer.strip()
+        json_result[idx+1]['equation'] = equation
 
-        if answer != "":
-            json_result[idx+1]['answer'] = answer.strip()
-            json_result[idx+1]['equation'] = equation
-        else:
-            json_result[idx+1]['answer'] = ""
-            json_result[idx+1]['equation'] = ""
+        # if answer != "":
+        #     json_result[idx+1]['answer'] = answer.strip()
+        #     json_result[idx+1]['equation'] = equation
+        # else:
+        #     json_result[idx+1]['answer'] = ""
+        #     json_result[idx+1]['equation'] = ""
 
     with open("../inference_results/a_15_both_7_test.json", "w", encoding="UTF-8") as f:    
         json.dump(json_result, f, ensure_ascii=False, indent=4)
