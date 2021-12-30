@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-# + active=""
-# import re
-# -
+import re
 
 number_dict = {
     0: '①',
