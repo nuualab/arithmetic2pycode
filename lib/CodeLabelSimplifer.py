@@ -517,3 +517,9 @@ def convert_custom_method(code):
     return code
 
 
+def test(code):
+    print("before simplify\n%s" % code)
+    simplify_code(code)
+    print("after simplify\n%s" % code)
+    restore_code(code)
+    print("after restore\n%s" % code)
