@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-import re
-import numpy as np
-import torch
-from torch.autograd import Variable
-# from lib.evaluate import *
 
 class Prefix_To_Infix:
     def __init__ (self):
@@ -328,7 +322,4 @@ def mapping_numbers(outputs, num_dict):
                 output[i] = numbers[output[i]]
                 
     return outputs
-
-
-#
 

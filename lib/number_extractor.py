@@ -1,10 +1,6 @@
-# -*- coding: utf-8 -*-
-# + active=""
-# import re
-# -
+import re
 
 number_dict = {
-    # 0: '⓪',
     0: '①',
     1: '②',
     2: '③',
@@ -13,10 +9,13 @@ number_dict = {
     5: '⑥',
     6: '⑦',
     7: '⑧',
-    8: '⑨'
+    8: '⑨',
+    9: 'ⓐ',
+    10: 'ⓑ',
+    11: 'ⓒ'
 }
 
-number_list = ['①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨']
+number_list = ['①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', 'ⓐ', 'ⓑ', 'ⓒ']
 
 
 def get_number_character(index):
@@ -27,9 +26,9 @@ def get_number_character(index):
 
 
 def extract_numbers(text):
-    regex_number = re.compile('[0-9]{1,100}.[0-9]{1,100}|'
-                              '[0-9]{1,100}/[0-9]{1,100}|'
-                              '[0-9]{1,100}')
+    regex_number = re.compile('[0-9]{1,1000}.[0-9]{1,1000}|'
+                              '[0-9]{1,1000}/[0-9]{1,1000}|'
+                              '[0-9]{1,1000}')
 
     n_idx = 0
     n_dict = dict()
