@@ -660,8 +660,8 @@ if __name__ == "__main__":
         keyword_checks.append(keyword_temp)
         
     
-    operand = ["①",  "②",  "③",  "④",  "⑤",  "⑥",  "⑦",  "⑧",  "⑨",  "ⓐ",  "ⓑ",  "ⓒ"]
-    operand_token = ["<unused10>",  "<unused11>",  "<unused12>",  "<unused13>",  "<unused14>",  "<unused15>",  "<unused16>",  "<unused17>",  "<unused18>",  "<unused19>",  "<unused20>",  "<unused21>"]
+    operand = ["①",  "②",  "③",  "④",  "⑤",  "⑥",  "⑦",  "⑧",  "⑨"]
+    operand_token = ["<unused10>",  "<unused11>",  "<unused12>",  "<unused13>",  "<unused14>",  "<unused15>",  "<unused16>",  "<unused17>",  "<unused18>"]
     
     operand_dict = {}
     for i in range(len(operand)):
@@ -692,37 +692,37 @@ if __name__ == "__main__":
     both_results = inference_both(both_outputs, keyword_checks)
     
     
-    if ensemble:
-        a_outputs = []
-        for i, question in enumerate(questions):
+    # if ensemble:
+    #     a_outputs = []
+    #     for i, question in enumerate(questions):
 
-            output = a_model.test(question)
-            for j in range(len(output)):
-                if output[j] in gpt_trans_convert_key:
-                    output[j] = gpt_trans_convert_key[output[j]]
+    #         output = a_model.test(question)
+    #         for j in range(len(output)):
+    #             if output[j] in gpt_trans_convert_key:
+    #                 output[j] = gpt_trans_convert_key[output[j]]
 
-                if output[j] in num_dict[i]:
-                    output[j] = num_dict[i][output[j]]
+    #             if output[j] in num_dict[i]:
+    #                 output[j] = num_dict[i][output[j]]
 
-            a_outputs.append(output)
+    #         a_outputs.append(output)
 
-        a_results = inference_a(a_outputs)
+    #     a_results = inference_a(a_outputs)
         
-        results = []
+    #     results = []
         
-        for i in range(len(both_results)):
-            if both_results[i]["type"] == 'c':
-                results.append(both_results[i])
+    #     for i in range(len(both_results)):
+    #         if both_results[i]["type"] == 'c':
+    #             results.append(both_results[i])
                 
-            elif a_results[i]["answer"] != "" or (a_results[i]["answer"] == "" and both_results[i]['answer'] == ""):
-                results.append(a_results[i])
+    #         elif a_results[i]["answer"] != "" or (a_results[i]["answer"] == "" and both_results[i]['answer'] == ""):
+    #             results.append(a_results[i])
                 
-            else:
-                results.append(both_results[i])
+    #         else:
+    #             results.append(both_results[i])
                 
         
-    else:
-        results = both_results
+    # else:
+    results = both_results
         
     json_result = {}
     for idx, result in enumerate(results):
