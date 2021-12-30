@@ -60,8 +60,6 @@ regex_number = re.compile('[0-9]{1,100}\.[0-9]{1,100}|'
                           '[0-9]{1,100}/[0-9]{1,100}|'
                           '[0-9]{1,100}')
 regex_number_replaced = re.compile('①|②|③|④|⑤|⑥|⑦|⑧|⑨|ⓐ|ⓑ|ⓒ')
-# regex_equation = re.compile('[A-Z0-9]{1,100}[ ]{0,1}[+\-*\/=].*[+\-*\/=][ ]{0,1}[A-Z0-9]{1,100}|'
-#                             '[A-Z0-9]{1,100}[ ]{0,1}[<>=]{1,2}[ ]{0,1}[A-Z0-9]{1,100}')
 regex_unknown_num = re.compile('[0-9A-Z]{2,100}')
 regex_unit = re.compile('[kK][cC][aA][lL]|[cC][aA][lL]|'
                         '[mM][mM]2|[cC][mM]2|[kK][mM]2|'
