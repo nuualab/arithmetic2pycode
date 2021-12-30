@@ -4,7 +4,6 @@
 # -
 
 number_dict = {
-    # 0: '⓪',
     0: '①',
     1: '②',
     2: '③',
@@ -27,9 +26,9 @@ def get_number_character(index):
 
 
 def extract_numbers(text):
-    regex_number = re.compile('[0-9]{1,100}.[0-9]{1,100}|'
-                              '[0-9]{1,100}/[0-9]{1,100}|'
-                              '[0-9]{1,100}')
+    regex_number = re.compile('[0-9]{1,1000}.[0-9]{1,1000}|'
+                              '[0-9]{1,1000}/[0-9]{1,1000}|'
+                              '[0-9]{1,1000}')
 
     n_idx = 0
     n_dict = dict()
