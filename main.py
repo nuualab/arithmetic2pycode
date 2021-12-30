@@ -660,8 +660,8 @@ if __name__ == "__main__":
         keyword_checks.append(keyword_temp)
         
     
-    operand = ["①",  "②",  "③",  "④",  "⑤",  "⑥",  "⑦",  "⑧",  "⑨"]
-    operand_token = ["<unused10>",  "<unused11>",  "<unused12>",  "<unused13>",  "<unused14>",  "<unused15>",  "<unused16>",  "<unused17>",  "<unused18>"]
+    operand = ["①",  "②",  "③",  "④",  "⑤",  "⑥",  "⑦",  "⑧",  "⑨", "ⓐ","ⓑ"]
+    operand_token = ["<unused10>",  "<unused11>",  "<unused12>",  "<unused13>",  "<unused14>",  "<unused15>",  "<unused16>",  "<unused17>",  "<unused18>", "<unused19>", "<unused20>"]
     
     operand_dict = {}
     for i in range(len(operand)):
