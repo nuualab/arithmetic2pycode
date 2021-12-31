@@ -26,9 +26,9 @@ def get_number_character(index):
 
 
 def extract_numbers(text):
-    regex_number = re.compile('[0-9]{1,1000}.[0-9]{1,1000}|'
-                              '[0-9]{1,1000}/[0-9]{1,1000}|'
-                              '[0-9]{1,1000}')
+    regex_number = re.compile('[0-9]{1,99}.[0-9]{1,99}|'
+                              '[0-9]{1,99}/[0-9]{1,99}|'
+                              '[0-9]{1,99}')
 
     n_idx = 0
     n_dict = dict()
