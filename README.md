@@ -1,4 +1,4 @@
-# math_problem_solve_2nd
+# arithmetic2pycode
 자연어로 된 수학문제를 읽어 답과 풀이(python code)를 제출하는 AI 모델을 배포합니다.
     
 ## Requirements
