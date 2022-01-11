@@ -21,7 +21,7 @@ git clone https://github.com/nuualab/math_problem_solve_2nd
 python main.py
 ```
 example 폴더의 example.json 파일을 읽어 추론 후 answer.json 파일을 생성 합니다.
-
+   
    
 ## Pretrained Model Download
 weights 디렉토리에 저장   
