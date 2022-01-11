@@ -55,13 +55,6 @@ def stdoutIO(stdout=None):
 parser = argparse.ArgumentParser(description='Simsimi based on KoGPT-2')
 
 
-
-parser.add_argument('--problem_path',
-                    type=str,
-                    default='"../inference_results/problem_400.json"',
-                    help='model binary for starting chat')
-
-
 parser.add_argument('--model_params',
                     type=str,
                     default='model_chp/model_-last.ckpt',
@@ -625,12 +618,16 @@ for i, key in enumerate(mapping_key):
     trans_gpt_convert_key[key] = value
     gpt_trans_convert_key[value] = key
 
-question_json = args.problem_path
+
+
+question_json = "./example/example.json"
+
+
 
 if __name__ == "__main__":
     
-    both_model = KoGPT2Chat.load_from_checkpoint("weights/both.ckpt").cuda()
-    a_model = KoGPT2Chat.load_from_checkpoint("weights/a.ckpt").cuda()
+    both_model = KoGPT2Chat.load_from_checkpoint("weights/code.ckpt").cuda()
+    a_model = KoGPT2Chat.load_from_checkpoint("weights/arithmetic.ckpt").cuda()
     ensemble = True
     
     with open(question_json, "r", encoding='utf-8-sig') as f:
@@ -660,8 +657,8 @@ if __name__ == "__main__":
         keyword_checks.append(keyword_temp)
         
     
-    operand = ["①",  "②",  "③",  "④",  "⑤",  "⑥",  "⑦",  "⑧",  "⑨", "ⓐ","ⓑ"]
-    operand_token = ["<unused10>",  "<unused11>",  "<unused12>",  "<unused13>",  "<unused14>",  "<unused15>",  "<unused16>",  "<unused17>",  "<unused18>", "<unused19>", "<unused20>"]
+    operand = ["①",  "②",  "③",  "④",  "⑤",  "⑥",  "⑦",  "⑧",  "⑨",  "ⓐ",  "ⓑ",  "ⓒ"]
+    operand_token = ["<unused10>",  "<unused11>",  "<unused12>",  "<unused13>",  "<unused14>",  "<unused15>",  "<unused16>",  "<unused17>",  "<unused18>",  "<unused19>",  "<unused20>",  "<unused21>"]
     
     operand_dict = {}
     for i in range(len(operand)):
@@ -731,17 +728,15 @@ if __name__ == "__main__":
         answer = result['answer']
         
         json_result[idx+1] = {}
-        json_result[idx+1]['answer'] = answer.strip()
-        json_result[idx+1]['equation'] = equation
 
-        # if answer != "":
-        #     json_result[idx+1]['answer'] = answer.strip()
-        #     json_result[idx+1]['equation'] = equation
-        # else:
-        #     json_result[idx+1]['answer'] = ""
-        #     json_result[idx+1]['equation'] = ""
+        if answer != "":
+            json_result[idx+1]['answer'] = answer.strip()
+            json_result[idx+1]['equation'] = equation
+        else:
+            json_result[idx+1]['answer'] = ""
+            json_result[idx+1]['equation'] = ""
 
-    with open("../inference_results/a_15_both_7_test.json", "w", encoding="UTF-8") as f:    
+    with open("answer.json", "w", encoding="UTF-8") as f:
         json.dump(json_result, f, ensure_ascii=False, indent=4)
 # --
 
