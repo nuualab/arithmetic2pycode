@@ -2,8 +2,8 @@
 자연어로 된 수학문제를 읽어 답과 풀이(python code)를 제출하는 AI 모델을 배포합니다.
     
 ## Requirements
-tokenizers==0.8.1.rc2   
-transformers==3.3.1     
+tokenizers==0.10.3 
+transformers==4.15.0     
 json5==0.9.6     
 pytorch==1.10.0   
 pytorch-lightning==1.2.10   
@@ -11,11 +11,18 @@ parso==0.8.2
 numpy==1.21.2
     
 ## How to install
-
+  
 ```
 git clone https://github.com/nuualab/math_problem_solve_2nd
 ```
-    
+  
+## How to run
+```
+python main.py
+```
+example 폴더의 example.json 파일을 읽어 추론 후 answer.json 파일을 생성 합니다.
+
+   
 ## Pretrained Model Download
 weights 디렉토리에 저장   
 [a.ckpt](https://drive.google.com/file/d/1XVEiTzujs4jixTO3lgFTJPdvJZZg8eVP/view?usp=sharing, "a.ckpt")   
