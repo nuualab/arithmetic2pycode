@@ -2,7 +2,7 @@
 자연어로 된 수학문제를 읽어 답과 풀이(python code)를 제출하는 AI 모델을 배포합니다.
     
 ## Requirements
-tokenizers==0.10.3 
+tokenizers==0.10.3    
 transformers==4.15.0     
 json5==0.9.6     
 pytorch==1.10.0   
