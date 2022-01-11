@@ -20,15 +20,15 @@ git clone https://github.com/nuualab/math_problem_solve_2nd
 ```
 python main.py
 ```
-example 폴더의 example.json 파일을 읽어 추론 후 answer.json 파일을 생성 합니다.
+example 폴더의 example.json 파일을 읽어 추론 후 answer.json 파일을 생성 합니다.  
    
    
 ## Pretrained Model Download
-weights 디렉토리에 저장   
-[a.ckpt](https://drive.google.com/file/d/1XVEiTzujs4jixTO3lgFTJPdvJZZg8eVP/view?usp=sharing, "a.ckpt")   
+weights 디렉토리에 저장 (산술 추론 모델)      
+[arithmetic.ckpt](https://drive.google.com/file/d/1XVEiTzujs4jixTO3lgFTJPdvJZZg8eVP/view?usp=sharing, "arithmetic.ckpt")   
      
-weights 디렉토리에 저장   
-[both.ckpt](https://drive.google.com/file/d/18Cc_s6OuAkOT67eujmrNq_a56UMPkQG9/view?usp=sharing, "both.ckpt")   
+weights 디렉토리에 저장 (코드 추론 모델)      
+[code.ckpt](https://drive.google.com/file/d/18Cc_s6OuAkOT67eujmrNq_a56UMPkQG9/view?usp=sharing, "code.ckpt")   
     
 weights/kogpt2 디렉토리에 저장   
 [pytorch_model.bin](https://drive.google.com/file/d/1oJsPsV-jIoxi3yDsKIqpIVQXYXXcvTuP/view?usp=sharing, "pytorch_model.bin")
